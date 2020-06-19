@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+.btn-primary {
+    background-color: rgb(255, 179, 86);
+color: black;
+border-color: rgb(185, 185, 185);
+display: block;
+margin:0 auto;
+width: 300px;
+  }
+  
+  .btn-primary:hover, .btn-primary.hover {
+    color: black;
+    background-color: rgb(255, 144, 8);
+    border-color: rgb(185, 185, 185);
+  }
+  
+  .btn-primary:focus, .btn-primary.focus {
+    color: black;
+    background-color:   rgb(255, 144, 8);
+    border-color: rgb(185, 185, 185);
+    box-shadow: none;
+  }
+  
+  .btn-primary.disabled, .btn-primary:disabled {
+    background-color: rgb(255, 179, 86);
+    color: black;
+    border-color: rgb(185, 185, 185);
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    background-color: rgb(255, 179, 86);
+    color: black;
+    border-color: rgb(185, 185, 185);
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-primary.dropdown-toggle:focus {
+    color: black;
+    background-color: rgb(255, 144, 8);
+    box-shadow: 0 0 0 0.2rem  rgb(255, 144, 8);
+  }
+
+#picture
+{
+    text-align:center;
+    
+}
+
+.form-control
+{
+    width:300px;
+    
+}
+
+.form-control:focus {
+    border-color:rgb(240, 169, 39);
+    box-shadow: 0 0 0 0.2rem rgb(240, 169, 39);
+} 
+
+.rContainer
+{
+    margin: 0 auto;
+    width: 340px;
+    border:1px solid rgb(185, 185, 185);
+    
+}
+
+.iContainer
+{
+    padding-left: 20px;
+}
+
+.inputLabel
+{
+    font-weight: bold;
+}
+
+.alertNotification
+{
+color: red;
+}

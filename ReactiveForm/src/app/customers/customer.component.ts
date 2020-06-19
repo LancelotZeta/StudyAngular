@@ -45,7 +45,7 @@ export class CustomerComponent implements OnInit {
   private validationMessages = {
     required: 'Please enter your email address.',
     email: 'Please enter a valid email address.',
-    minLength: 'Please enter more than 13 chars.'
+    minlength: 'Please enter more than 13 chars.'
   };
 
   constructor(private fb: FormBuilder) { }
