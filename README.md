@@ -1,2 +1,2 @@
-# StudyAngular
-For Angular study and practice
+# StudyAngularForm
+For Angular Form study and practice
