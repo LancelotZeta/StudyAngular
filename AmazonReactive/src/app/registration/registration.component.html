@@ -1,0 +1,62 @@
+<div align=center >
+<img id="picture"  src="../../assets/amazon.png" />
+</div>
+<br/>
+<form novalidate class="rContainer" [formGroup]="userForm" (ngSubmit)="onSubmit()" #form="ngForm" >
+    <div class="iContainer">
+        <h2>Create account</h2>
+    <div class="form-group">
+        <label for="nameId" class="inputLabel">Your name</label>
+        <input id="nameId" formControlName="username" class="form-control" 
+            [class.field-error]="form.submitted&&userForm.get('username').invalid" />
+        <span *ngIf="userForm.get('username').errors?.required&&form.submitted" class=alertNotification>
+            ! Enter your name
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="emailId" class="inputLabel">Email</label> 
+        <input id="emailId" formControlName="useremail" type="email" class="form-control" 
+        [class.field-error]="form.submitted&&userForm.get('useremail').invalid"/>
+        <span *ngIf="userForm.get('useremail').errors?.required&&form.submitted" class=alertNotification>
+            ! Enter your email
+        </span>
+        <span *ngIf="userForm.get('useremail').errors?.email&&form.submitted" class=alertNotification>
+            ! Enter a valid email address
+        </span>
+    </div>
+    <div formGroupName="passwordGroup">
+    <div class="form-group">
+        <label for="passwordId" class="inputLabel">Password</label> 
+        <input id="passwordId" formControlName="userpassword" type="password" class="form-control" placeholder="At least 6 characters"
+         [class.field-error]="form.submitted&&userForm.get('passwordGroup.userpassword').invalid"/>
+        <span *ngIf="userForm.get('passwordGroup.userpassword').errors?.required&&form.submitted" class=alertNotification>
+            ! Enter your password
+        </span>
+        <span *ngIf="userForm.get('passwordGroup.userpassword').errors?.minlength&&form.submitted" class=alertNotification>
+            ! Passwords must be at least 6 characters
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="rePasswordId" class="inputLabel">Re-enter password</label> 
+        <input id="rePasswordId" formControlName="userrepassword" type="password" class="form-control" 
+         [class.field-error]="(userForm.get('passwordGroup.userpassword').value&&userForm.get('passwordGroup.userrepassword').invalid||userForm.get('passwordGroup').errors?.match)&&form.submitted" />
+        <span *ngIf="userForm.get('passwordGroup.userrepassword').errors?.required&&form.submitted" class=alertNotification>
+            ! Type your password again
+        </span>
+        <span *ngIf="userForm.get('passwordGroup').errors?.match&&form.submitted" class=alertNotification>
+            ! Passwords must match
+        </span>
+    </div>
+</div>
+    </div>
+        <button type="submit" class="btn btn-primary" id="amazonButton" >Create your Amazon account</button>
+        <br/>
+    <div class="iContainer">
+        By creating an account, you agree to Amazon's <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=508088">
+            Conditions of Use</a> and <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie=UTF8&nodeId=468496">
+            Privacy Notice</a>. 
+    </div>
+    
+</form>
+
+
