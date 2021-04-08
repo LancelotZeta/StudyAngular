@@ -1,5 +1,5 @@
-# StudyAngularForm
-For Angular Form study and practice
+# AngularFormPractice
+For Angular Form practice
 
 TemplateForm
 ----
